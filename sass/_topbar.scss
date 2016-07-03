@@ -1,0 +1,78 @@
+$topbar-height: ($sidebar-logo-height + ($sidebar-logo-padding-vertical * 2));
+$topbar-background-color: $brand-grey1;
+$topbar-logoMark-color: $core-color-light;
+$topbar-padding-vertical: 7px;
+
+$topbar-adminListItem-color: $brand-primary;
+$topbar-adminListItem-font-size: 18px;
+$topbar-adminListItem-padding-vertical: 13px;
+$topbar-adminListItem-padding-horizontal: 16px;
+
+$topbar-adminListItem-active-background-color: $brand-tertiary;
+$topbar-adminListItem-active-color: $core-color-light;
+
+$topbar-notificationBadge-background-color: $brand-quarternary;
+$topbar-notificationBadge-color: $core-color-light;
+$topbar-noficationBadge-height: 10px;
+$topbar-noficationBadge-width: 10px;
+$topbar-noficationBadge-font-size: 10px;
+$topbar-noficationBadge-border-radius: $core-border-radius;
+$topbar-noficationBadge-padding: 3px 4px;
+
+$topbar-transition: all 0.1s ease-in-out;
+
+.topbar {
+  height: $topbar-height;
+  background: $topbar-background-color;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  overflow: hidden;
+}
+
+.topbar_row {
+  margin-left: $sidebar-width;
+}
+
+.topbar_search {
+  padding-top: $topbar-padding-vertical;
+}
+
+.topbar_adminList {
+  list-style: none;
+}
+
+.topbar_adminListItem {
+  @include transition($topbar-transition);
+  top: 0;
+  cursor: pointer;
+  position: relative;
+  color: $topbar-adminListItem-color;
+  display: inline-block;
+  font-size: $topbar-adminListItem-font-size;
+  padding: $topbar-adminListItem-padding-vertical $topbar-adminListItem-padding-horizontal;
+
+  &.greeting {
+    top: 1px;
+    cursor: default;
+  }
+}
+
+.topbar_adminListItem-active {
+  background-color: $topbar-adminListItem-active-background-color;
+  color: $topbar-adminListItem-active-color;
+}
+
+.topbar_notificationBadge {
+  background-color: $topbar-notificationBadge-background-color;
+  color: $topbar-notificationBadge-color;
+  font-size: $topbar-noficationBadge-font-size;
+  border-radius: $topbar-noficationBadge-border-radius;
+  height: auto;
+  width: auto;
+  padding: $topbar-noficationBadge-padding;
+  position: absolute;
+  top: 6px;
+  left: 27px;
+  text-align: center;
+}

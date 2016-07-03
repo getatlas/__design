@@ -1,0 +1,8 @@
+{
+  "name": "Atlas",
+  "version": "0.0.1",
+  "dependencies": {
+    "fontawesome": "*",
+    "bootstrap": "^3.3.6"
+  }
+}

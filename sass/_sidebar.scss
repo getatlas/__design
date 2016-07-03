@@ -1,0 +1,92 @@
+$sidebar-background-color: $brand-primary;
+$sidebar-width: 60px;
+$sidebar-logo-height: 30px;
+$sidebar-logo-padding-vertical: 10px;
+$sidebar-logo-margin-bottom: 30px;
+$sidebar-logo-padding-horizontal: 5px;
+
+$nav-item-color: $core-color-light;
+$nav-item-font-size: 24px;
+$nav-item-padding-vertical: 10px;
+$nav-item-padding-horizontal: 5px;
+
+$nav-item-active-background-color: $brand-secondary;
+
+$nav-item-shadow-color: darken($sidebar-background-color, 10%);
+
+$sidebar-subMenu-font-size: 14px;
+$sidebar-subMenu-padding-vertical: 0;
+$sidebar-subMenu-padding-horizontal: 0;
+$sidebar-subMenu-listItem-padding-vertical: 10px;
+$sidebar-subMenu-listItem-padding-horizontal: 20px;
+$sidebar-subMenu-hover-background-color: $brand-secondary;
+
+$sidebar-transition: all 0.1s ease-in-out;
+
+.sidebar {
+  top: 0;
+  height: 100%;
+  position: fixed;
+  width: $sidebar-width;
+  background: $sidebar-background-color;
+}
+
+.sidebar_nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: $nav-item-color;
+  text-align: center;
+}
+
+.sidebar_navItem {
+  @include transition($sidebar-transition);
+  font-size: $nav-item-font-size;
+  padding: $nav-item-padding-vertical $nav-item-padding-horizontal;
+  position: relative;
+  left: 0;
+  border-radius: 0;
+
+  &:hover, &:focus {
+    cursor: pointer;
+  }
+}
+
+.sidebar_navItem-active {
+  background-color: $nav-item-active-background-color;
+}
+
+.sidebar_navItem-logo {
+  padding: $sidebar-logo-padding-vertical $sidebar-logo-padding-horizontal;
+  margin-bottom: $sidebar-logo-margin-bottom;
+}
+
+.sidebar_navItem-logo-image {
+  height: $sidebar-logo-height;
+  color: $core-color-light;
+}
+
+.sidebar_subMenu {
+  @include transition($sidebar-transition);
+  display: none;
+  list-style: none;
+  position: absolute;
+  width: 200px;
+  background: $sidebar-background-color;
+  left: ($sidebar-width);
+  text-align: left;
+  padding: $sidebar-subMenu-padding-vertical $sidebar-subMenu-padding-horizontal;
+  top: 0;
+  border-radius: 0 $core-border-radius $core-border-radius 0;
+}
+
+.sidebar_subMenu_listItem {
+  @include transition($sidebar-transition);
+  font-size: $sidebar-subMenu-font-size;
+  color: $nav-item-color;
+  padding: $sidebar-subMenu-listItem-padding-vertical $sidebar-subMenu-listItem-padding-horizontal;
+
+  &:hover, &:focus {
+    background-color: $sidebar-subMenu-hover-background-color;
+  }
+}

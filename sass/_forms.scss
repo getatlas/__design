@@ -1,0 +1,13 @@
+$form-control-focus-border-color: $brand-secondary;
+$form-control-color: $core-font-color;
+
+.form-control {
+  border-radius: $core-border-radius;
+  border-color: $core-color-light;
+  color: $form-control-color;
+
+  &:focus {
+    border-color: $form-control-focus-border-color;
+    box-shadow: none;
+  }
+}

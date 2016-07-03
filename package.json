@@ -1,0 +1,15 @@
+{
+  "name": "Atlas",
+  "version": "0.0.1",
+  "description": "A simple yet powerful modularised admin system for server and cluster monitoring.",
+  "author": "Alex Bowers and Salma Alam-Naylor",
+  "repository": "",
+  "license": "",
+  "dependencies": {
+    "gulp-clean-css": "^2.0.10",
+    "gulp-concat": "^2.6.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^1.5.4"
+  }
+}

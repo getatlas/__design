@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Atlas</title>
+    <meta name="description" content="A simple yet powerful modularised admin system for server and cluster monitoring.">
+
+    <!--[if lt IE 9]>
+    <script src="//s1.thcdn.com/design-assets/scripts/shiv/html5.js"></script>
+    <![endif]-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="dist/css/atlas.min.css">
+
+
+</head>
+<body>
+
+<div class="topbar">
+    <div class="row topbar_row">
+        <div class="col-sm-4 topbar_search">
+            <div class="input-group">
+                <input class="form-control" placeholder="Search Atlas" type="text">
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-primary"><i class="fa fa-search"></i></button>
+                </span>
+            </div>
+        </div>
+        <div class="col-sm-8 text-right">
+            <ul class="topbar_adminList">
+                <li class="topbar_adminListItem greeting">Hey, Alex!</li>
+                <li class="topbar_adminListItem js-adminItem" data-admin-menu="user"><i class="fa fa-user"></i></li>
+                <li class="topbar_adminListItem js-adminItem" data-admin-menu="messages">
+                    <i class="fa fa-envelope-o"></i>
+                    <span class="topbar_notificationBadge">10</span>
+                </li>
+                <li class="topbar_adminListItem js-adminItem" data-admin-menu="notifications"><i class="fa fa-bell-o"></i></li>
+                <li class="topbar_adminListItem"><i class="fa fa-sign-out"></i></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="sidebar">
+    <ul class="sidebar_nav">
+        <li class="sidebar_navItem-logo">
+            <img src="dist/img/logos/atlas-mark.svg" class="sidebar_navItem-logo-image" alt="Atlas">
+        </li>
+        <li class="sidebar_navItem js-navItem" data-submenu="false">
+            <i class="fa fa-home"></i>
+        </li>
+        <li class="sidebar_navItem js-navItem js-hasSubMenu" data-menu="dashboard">
+            <i class="fa fa-dashboard"></i>
+            <ul class="sidebar_subMenu js-subMenu" data-submenu="dashboard">
+                <li class="sidebar_subMenu_listItem">Item 1</li>
+                <li class="sidebar_subMenu_listItem">Item 2</li>
+                <li class="sidebar_subMenu_listItem">Item 3</li>
+                <li class="sidebar_subMenu_listItem">Item 4</li>
+                <li class="sidebar_subMenu_listItem">Item 5</li>
+            </ul>
+        </li>
+        <li class="sidebar_navItem js-navItem js-hasSubMenu" data-menu="chart">
+            <i class="fa fa-bar-chart"></i>
+            <ul class="sidebar_subMenu js-subMenu" data-submenu="chart">
+                <li class="sidebar_subMenu_listItem">Item 1</li>
+                <li class="sidebar_subMenu_listItem">Item 2</li>
+                <li class="sidebar_subMenu_listItem">Item 3</li>
+                <li class="sidebar_subMenu_listItem">Item 4</li>
+                <li class="sidebar_subMenu_listItem">Item 5</li>
+            </ul>
+        </li>
+        <li class="sidebar_navItem js-navItem js-hasSubMenu" data-menu="errors">
+            <i class="fa fa-warning"></i>
+            <ul class="sidebar_subMenu js-subMenu" data-submenu="errors">
+                <li class="sidebar_subMenu_listItem">Item 1</li>
+                <li class="sidebar_subMenu_listItem">Item 2</li>
+                <li class="sidebar_subMenu_listItem">Item 3</li>
+                <li class="sidebar_subMenu_listItem">Item 4</li>
+                <li class="sidebar_subMenu_listItem">Item 5</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="dist/js/atlas.min.js"></script>
+</body>
+</html>

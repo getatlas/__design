@@ -1,0 +1,17 @@
+$btn-primary-background-color: $brand-secondary;
+$btn-primary-border-color: $brand-secondary;
+$btn-primary-color: $core-color-light;
+
+.btn-primary {
+  @include transition(all 0.2s ease-in-out);
+  color: $btn-primary-color;
+  background-color: $btn-primary-background-color;
+  border-color: $btn-primary-border-color;
+  border-radius: $core-border-radius;
+
+  &:hover, &:focus {
+    background-color: darken($btn-primary-background-color, 10%);
+    border-color: darken($btn-primary-background-color, 10%);
+    color: darken($btn-primary-color, 5%);
+  }
+}
